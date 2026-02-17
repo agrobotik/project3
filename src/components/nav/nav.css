@@ -1,0 +1,18 @@
+.nav-bar {
+    grid-area: n;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-bar__link {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar__link:hover {
+    color: #6185fb;
+}

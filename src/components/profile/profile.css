@@ -1,0 +1,45 @@
+.profile {
+    grid-area: p;
+    padding: 40px;
+}
+
+.profile__user {}
+
+.profile-user__img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile__add-post-container {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-posts__input {
+    width: fit-content;
+    background: none;
+    border: 1px white dashed;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+}
+
+.profile-posts__input:focus {
+    outline: none;
+    border: 1px white solid;
+}
+
+.profile-posts__add-post {
+    width: fit-content;
+    background-color: #282c34;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.profile-posts__add-post:active {
+    background-color: lightblue;
+}

@@ -1,3 +1,8 @@
+/* @import url('./components/header/header.css');
+@import url('./components/nav/nav.css');
+@import url('./components/profile/profile.css '); */
+
+
 .App {
   text-align: center;
 }
@@ -47,7 +52,7 @@
   background-color: #8a95ad;
   display: grid;
   grid-template-columns: 2fr 10fr;
-  grid-template-rows: repeat(20%, 5);
+  grid-template-rows: repeat(16.6%, 6);
   grid-gap: 10px;
 
   grid-template-areas: 'h h'
@@ -55,49 +60,11 @@
     'n p'
     'n p'
     'n p'
-    'n p';
+    'n p'
+    'n m';
 }
 
 .wrapper>div {
   border-radius: 20px;
   background-color: #282c34;
-}
-
-.header {
-  grid-area: h;
-}
-
-.nav-bar {
-  grid-area: n;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.nav-bar__link {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-bar__link:hover {
-  color: #6185fb;
-}
-
-.profile {
-  grid-area: p;
-  padding: 40px;
-}
-
-.profile__user {}
-
-.profile-user__img {
-  width: 100px;
-}
-
-.header__logo {
-  width: 50px;
-  height: 50px;
 }

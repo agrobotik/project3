@@ -1,21 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/nav/nav';
 import Header from './components/header/header';
+import NavBar from './components/nav/nav';
 import Profile from './components/profile/profile'
+
+import Messages from './components/messages/messages';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className='wrapper'>
-      <NavBar />
-      <Header />
-      <Profile />
+      <BrowserRouter>
+        <Header />
+        <NavBar />
+        <div className='route-container'>
+          <Route path="/profile" component={Profile} />
+          <Route path="/messages" component={Messages} />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
 
 
-
+// прочитать про пропсы https://ru.legacy.reactjs.org/docs/components-and-props.html
 
 
 export default App;
