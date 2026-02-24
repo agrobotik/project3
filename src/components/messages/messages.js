@@ -1,14 +1,20 @@
 import Message from "./message/message";
-import './messages.css'
+import Content from "./content/content";
+import './messages.css';
 
-function Messages() {
+
+
+function Messages({ messages }) {
     return (
         <div className="messages-container">
             <div className="messages">
-                <Message name="Иван Иванов" content="Привет" />
-                <Message name="Илон Маск" content="Го на Марс" />
-                <Message name="Билл Гейтс" content="Где мой чип?" />
+                {messages.users.map((e, index) => <Message name={e.name} id={index} key={index} />)}
             </div>
+
+            <div className="messages__content">
+                {messages.users.map((e, index) => <Content content={e.content[e.content.length - 1]} key={index} />)}
+            </div>
+
             <input type="text" placeholder="Enter your message" className="messages__input" />
             <button className="messages__send">Send</button>
         </div>

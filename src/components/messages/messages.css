@@ -1,3 +1,30 @@
 .messages-container {
     grid-area: 'm';
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    padding: 20px;
+}
+
+.messages__send {
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+}
+
+.messages {
+    gap: 17px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.messages__send {
+    justify-self: flex-end;
+    flex-grow: 2;
+}
+
+.messages__input {
+    flex-grow: 3;
+    margin-right: 10px;
 }

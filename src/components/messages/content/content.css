@@ -1,0 +1,11 @@
+.messages__content {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 50%;
+}
+
+.message__content {
+    flex-grow: 1;
+    margin: 0;
+}

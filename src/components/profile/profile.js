@@ -1,7 +1,8 @@
 import profile_picture from '../../images/profile_picture.jpg'
 import './profile.css';
 import Posts from './posts/posts';
-function Profile(props) {
+
+function Profile({ posts, add_post }) {
   return (
     <div className='profile'>
       <div className="profile__user">
@@ -9,7 +10,7 @@ function Profile(props) {
         <h2 className='profile-user__name'>Stepan</h2>
         <p className='profile-user__bio'>Если пишешь код - ты программист, если не пишешь то не программист</p>
       </div>
-      <Posts />
+      <Posts posts={posts} add_post={add_post} />
 
     </div>
   );

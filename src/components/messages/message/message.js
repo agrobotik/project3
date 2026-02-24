@@ -1,11 +1,13 @@
 import './message.css'
+import { NavLink } from "react-router-dom";
 
-function Message(props) {
+function Message({ id, name }) {
     return (
         <div className="message-container">
             <div className="message">
-                <p className="message__name">{props.name}</p>
-                <p className="message__content">{props.content}</p>
+                <div className='message__user'>
+                    <NavLink className="message__name" to={`/messages/direct/${id}`}>{name}</NavLink>
+                </div>
             </div>
         </div>
     )
