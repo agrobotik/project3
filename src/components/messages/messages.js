@@ -1,10 +1,16 @@
 import Message from "./message/message";
 import Content from "./content/content";
+import React from "react";
 import './messages.css';
+import { re_render_tree } from "../../render";
 
+let messages_input = React.createRef();
 
-
-function Messages({ messages }) {
+function Messages({ messages, add_message }) {
+    let get_message = () => {
+        add_message(messages_input.current.value);
+        messages_input.current.value = "";
+    }
     return (
         <div className="messages-container">
             <div className="messages">
@@ -15,8 +21,8 @@ function Messages({ messages }) {
                 {messages.users.map((e, index) => <Content content={e.content[e.content.length - 1]} key={index} />)}
             </div>
 
-            <input type="text" placeholder="Enter your message" className="messages__input" />
-            <button className="messages__send">Send</button>
+            <input type="text" placeholder="Enter your message" className="messages__input" ref={messages_input} />
+            <button className="messages__send" onClick={get_message}>Send</button>
         </div>
     )
 }

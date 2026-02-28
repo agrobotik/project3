@@ -10,6 +10,7 @@ function Profile({ posts, add_post }) {
         <h2 className='profile-user__name'>Stepan</h2>
         <p className='profile-user__bio'>Если пишешь код - ты программист, если не пишешь то не программист</p>
       </div>
+
       <Posts posts={posts} add_post={add_post} />
 
     </div>
