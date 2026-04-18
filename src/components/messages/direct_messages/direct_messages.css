@@ -1,0 +1,15 @@
+.direct-messages__container {
+    height: 80%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.direct-messages__utils {
+    display: flex;
+}
+
+.direct-messages__send {}
+
+.direct-messages__messages {}

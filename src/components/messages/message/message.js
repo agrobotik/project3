@@ -1,7 +1,7 @@
 import './message.css'
 import { NavLink } from "react-router-dom";
 
-function Message({ id, name }) {
+function Message({ id, name, messages_page }) {
     return (
         <div className="message-container">
             <div className="message">

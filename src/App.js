@@ -17,7 +17,7 @@ function App({ data, add_post, add_message }) {
         <NavBar />
         <div className='route-container'>
           <Routes>
-            <Route path="/" element={<Profile />} />
+            <Route path="/" element={<Profile posts={data.profile_page} add_post={add_post} />} />
             <Route path="/profile" element={<Profile posts={data.profile_page} add_post={add_post} />} />
             <Route path="/messages" element={<Messages messages={data.messages_page} add_message={add_message} />} />
 
