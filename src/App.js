@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Direct_messages from './components/messages/direct_messages';
 
 
-function App({ data, add_post, add_message }) {
+function App({ data, add_post, add_message, on_post_change, on_message_change }) {
   return (
     <div className='wrapper'>
       <BrowserRouter>
@@ -17,11 +17,11 @@ function App({ data, add_post, add_message }) {
         <NavBar />
         <div className='route-container'>
           <Routes>
-            <Route path="/" element={<Profile posts={data.profile_page} add_post={add_post} />} />
-            <Route path="/profile" element={<Profile posts={data.profile_page} add_post={add_post} />} />
+            <Route path="/" element={<Profile posts={data.profile_page} add_post={add_post} on_post_change={on_post_change} />} />
+            <Route path="/profile" element={<Profile posts={data.profile_page} add_post={add_post} on_post_change={on_post_change} />} />
             <Route path="/messages" element={<Messages messages={data.messages_page} add_message={add_message} />} />
 
-            <Route path={`/messages/direct/:id`} element={<Direct_messages messages={data.messages_page} />} />
+            <Route path={`/messages/direct/:id`} element={<Direct_messages messages={data.messages_page} add_message={add_message} on_message_change={on_message_change} />} />
           </Routes>
         </div>
       </BrowserRouter>

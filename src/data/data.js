@@ -1,4 +1,4 @@
-export let store = {
+let store = {
     re_render_tree(data) {
         console.log("fake function");
     },
@@ -18,8 +18,22 @@ export let store = {
                 content: [content]
             }
             this._DATA.messages_page.users.unshift(user);
+        }
+        this.re_render_tree(this.get_data());
+    },
+    add_direct_message(content) {
+        if (content) {
 
         }
+    },
+    on_message_change(text) {
+        this._DATA.messages_page.new_message_text = text;
+        this.re_render_tree(this.get_data());
+    },
+
+    on_post_change(text) {
+        this._DATA.profile_page.new_post_text = text;
+        this.re_render_tree(this.get_data());
     },
     get_data() {
         return this._DATA;
@@ -38,10 +52,10 @@ export let store = {
                 },
                 {
                     name: 'Бил Гейтс',
-                    content: ['Где мой чип']
+                    content: ['Где мой чип'] // Переделать массив в массив обьектов с временем,  сендером и тд.
                 },
             ],
-            new_message_text: "sasdas"
+            new_message_text: ""
         },
 
         profile_page: {
@@ -53,3 +67,4 @@ export let store = {
     }
 }
 
+export default store;
